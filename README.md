@@ -23,4 +23,4 @@ Demonstrate error handling and unexpected behavior.
 Great for coding exercises, educational demos, or creative coding challenges.
 
 🚀 Live Demo
-View Live
+View Live -: ( https://kashishch28.github.io/Faulty-Calculator/ )
