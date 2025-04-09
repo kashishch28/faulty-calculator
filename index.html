@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Faulty Calculator</h1>
+        
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
+        
+        <div class="operation-buttons">
+            <button class="math-btn" data-op="+">
+                <span class="symbol">+</span>
+                <span class="label">Addition</span>
+            </button>
+            <button class="math-btn" data-op="-">
+                <span class="symbol">−</span>
+                <span class="label">Subtraction</span>
+            </button>
+            <button class="math-btn" data-op="*">
+                <span class="symbol">×</span>
+                <span class="label">Multiplication</span>
+            </button>
+            <button class="math-btn" data-op="/">
+                <span class="symbol">÷</span>
+                <span class="label">Division</span>
+            </button>
+        </div>
+        
+        <button class="calculate-button" onclick="faultyCalculator()">Calculate</button>
+        
+        <div id="result" class="result-block">Result: </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

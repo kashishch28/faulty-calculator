@@ -1,0 +1,176 @@
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #ff0000; }
+    50% { box-shadow: 0 0 20px #ff0000; }
+    100% { box-shadow: 0 0 5px #ff0000; }
+}
+
+:root {
+    --math-dark: #2c3e50;
+    --math-primary: #3498db;
+    --math-secondary: #e74c3c;
+    --math-light: #ecf0f1;
+    --math-accent: #f1c40f;
+}
+
+body {
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    background: linear-gradient(135deg, var(--math-dark), #34495e);
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: var(--math-light);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 350px;
+    max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+}
+
+.operation-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.math-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.math-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.math-btn .symbol {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.math-btn .label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.math-btn.active {
+    background: var(--math-accent);
+    color: var(--math-dark);
+    border-color: var(--math-accent);
+}
+
+.calculate-button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--math-primary), #2980b9);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.calculate-button:active {
+    transform: translateY(0);
+}
+
+.calculate-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    transition: all 0.3s ease;
+}
+
+.calculate-button:hover::after {
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), transparent);
+}
+
+.result-block {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    min-height: 30px;
+}
+
+.faulty {
+    animation: shake 0.5s, glow 1.5s;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.history {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #6c757d;
+    text-align: left;
+    max-height: 100px;
+    overflow-y: auto;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.history-item {
+    margin: 3px 0;
+    padding: 2px 5px;
+    border-bottom: 1px solid #ddd;
+}
