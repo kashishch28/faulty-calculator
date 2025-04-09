@@ -6,11 +6,13 @@ Takes two numbers and an operator as input.
 
 Performs the following faulty operations:
 
-Input Operator	Faulty Operation
-+	-
--	/
-*	+
-/	** (exponent)
+| Input Operator | Faulty Operation |
+|----------------|------------------|
+| `+`            | `-`              |
+| `-`            | `/`              |
+| `*`            | `+`              |
+| `/`            | `**`             |
+
 Has a 10% chance to give the correct result.
 
 🎯 Purpose
