@@ -1,4 +1,6 @@
 ⚙️ Faulty Calculator
+
+
 This is a fun and educational web-based calculator built using HTML, CSS, and JavaScript. Unlike a normal calculator, it intentionally performs incorrect operations based on predefined logic and includes a small chance to return the correct result.
 
 🔧 How It Works
